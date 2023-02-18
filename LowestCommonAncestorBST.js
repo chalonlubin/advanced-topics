@@ -13,7 +13,18 @@
  * @return {TreeNode}
  */
 const lowestCommonAncestor = function (root, p, q) {
-  // could use a stack to compare as we travel down from the root,
-  // add each value, including p & q, allow duplicates, and then return the lowest
-  // double value?
+  while (root) {
+    // traverse right
+    if (root.val < p.val && root.val < q.val) {
+      root = root.right;
+    }
+    // traverse left
+    else if (root.val > p.val && root.val > q.val) {
+      root = root.left;
+    } else {
+      break;
+    }
+  }
+  // if we cannot go further we have found the lowest common ancestor.
+  return root;
 };
