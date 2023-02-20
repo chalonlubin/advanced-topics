@@ -28,3 +28,14 @@ const lowestCommonAncestor = function (root, p, q) {
   // if we cannot go further we have found the lowest common ancestor.
   return root;
 };
+
+// recursive
+const lowestCommonAncestor2 = function (root, p, q) {
+  if (p.val < root.val && q.val < root.val) {
+    return lowestCommonAncestor(root.left, p, q);
+  } else if (p.val > root.val && q.val > root.val) {
+    return lowestCommonAncestor(root.right, p, q);
+  } else {
+    return root;
+  }
+};
