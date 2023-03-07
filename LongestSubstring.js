@@ -1,11 +1,11 @@
 "use strict";
+
+
 // Given a string s, find the length of the longest
 // substring
 //  without repeating characters.
 
-// abcabc - 3
-// bbbbb - 1
-// abcdafg - bcdafg?
+/** 1st attempt 0(n) */
 const lengthOfLongestSubstring = function (s) {
   let sArr = s.split("");
   let res = [];
@@ -20,7 +20,6 @@ const lengthOfLongestSubstring = function (s) {
       // record length
       // remove until no more dupes
       res.shift();
-      // increment last
     } else {
       // push the val
       res.push(sArr[cur]);

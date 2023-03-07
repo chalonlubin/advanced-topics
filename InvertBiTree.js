@@ -1,3 +1,5 @@
+"use strict";
+
 /* Given the `root` of a binary tree, invert the tree, and return _its root_. */
 
 /**

@@ -13,7 +13,8 @@
  * @return {boolean}
  */
 
-// Stumped. Need to ask about this one.
+// Stumped. Need to revisit this one.
+
 var isBalanced = function (root, r = 0, l = 0) {
   if (root === null) return false;
   isBalanced(root.left, r, l + 1);

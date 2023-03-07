@@ -1,3 +1,4 @@
+"use strict";
 /**
  * Given an array of integers `nums` and an integer `target`,
  * return _indices of the two numbers such that they add up to
@@ -18,5 +19,21 @@ const twoSum = function (nums, target) {
       map.set(nums[i], i);
     }
   }
-  return [];
 };
+
+
+/** Attempt 2 T: O(n) S: O(n) */
+// I guess I forgot about hash maps.. 2 pointer solution
+var twoSum2 = function(nums, target) {
+  let start = 0;
+  let end = nums.length-1
+
+  while (start < nums.length) {
+      if (nums[start] + nums[end] === target) return [start, end];
+      end -= 1;
+      if (end <= start) {
+          end = nums.length-1;
+          start += 1;
+      }
+  }
+}
