@@ -7,12 +7,7 @@
  * }
  */
 
-/**
- * @param {TreeNode} root
- * @param {TreeNode} p
- * @param {TreeNode} q
- * @return {TreeNode}
- */
+
 const lowestCommonAncestor = function (root, p, q) {
   while (root) {
     // traverse right
