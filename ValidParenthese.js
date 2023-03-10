@@ -33,3 +33,21 @@ function isValid(s) {
   }
   return !stack.length;
 }
+
+
+function checkValid1(s) {
+  let stack = [];
+
+  for (let char of s) {
+    if (char === "(") {
+      stack.push(")")
+    } else {
+      if (stack.pop() !== ")") return false;
+    }
+  }
+  return !stack.length;
+}
+
+console.log(checkValid1("(())"));
+console.log(checkValid1("())"));
+console.log(checkValid1("(()"));
