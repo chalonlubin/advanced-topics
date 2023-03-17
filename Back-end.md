@@ -13,7 +13,6 @@ What is a lambda function?
 How does python and express differ with respect to managing 3rd party dependencies
 What is difference between SQL Injection and XSS
 What are design patterns and give me an example of one
-
 What is the purpose of Amazon S3?
 How have you deployed applications?
 What is a load balancer?
