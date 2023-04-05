@@ -1,7 +1,7 @@
 
-# Advanced Topics 
+# Advanced Topics
 
-DSA practice as well as revisitng topics like 'this' 'bind' 'call' and various conceptual questions that could be common in interviews. 
+DSA practice as well as revisitng topics like 'this' 'bind' 'call' and various conceptual questions that could be common in interviews.
 
 
 ## 🧐 Motivation & Challenges
@@ -20,7 +20,7 @@ DSA practice as well as revisitng topics like 'this' 'bind' 'call' and various c
 
 - complete 5 dsa problems a week (sourced from leet code)
 
-- complete 10 conceptual problems a week (sourced from various interview records)
+- complete 20 conceptual problems a week (sourced from various interview records)
 
 
 

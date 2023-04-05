@@ -1,4 +1,4 @@
-<!-- First try, no lookups just raw answers -->
+<!-- First attempt, no lookups just raw answers -->
 What is the call stack?
   The call stack is where functions go when they are being evaluated. FILO structure, where functions are pushed on a popped off.
 What is Express middleware?
@@ -76,6 +76,7 @@ What is an advantage of building my back-end as an API?
   * Not confident
   - It is headless, can can be interacted with in many ways through many applications. It allows for versatility.
 
+<!-- Second attempt, after researching unclear answers and waiting a day.  -->
 What is the call stack?
 What is Express middleware?
 What is an advantage of using Node.js compared to Python or PHP?
