@@ -230,6 +230,7 @@ _NOT NULL constraint: This requires a column to have a value and prevents null v
 _UNIQUE constraint: This ensures that a column or set of columns contains unique values and prevents duplicate values from being inserted into a table._
 
 ### What are some drawbacks of Server Side Rendering?
+
 ```
 Some drawbacks of Server Side Rendering (SSR) are:
 
@@ -245,6 +246,7 @@ Overall, while SSR can provide benefits in terms of SEO and initial load time, i
 ```
 
 ### What are some drawbacks of Client Side Rendering?
+
 ```
 Some drawbacks of Client Side Rendering (CSR) are:
 
@@ -260,7 +262,9 @@ Overall, while CSR can provide benefits in terms of interactivity and fast subse
 ```
 
 ### What is an advantage of building my back-end as an API?
+
 <!-- * It is headless, can can be interacted with in many ways through many applications. It allows for versatility. -->
+
 ```
 Building your back-end as an API can provide several advantages, such as:
 
@@ -276,8 +280,6 @@ Reusability: An API-based back-end can be reused across multiple applications, r
 
 Overall, building your back-end as an API can provide significant advantages in terms of scalability, modularity, security, and reusability, making it a popular choice for modern web and mobile applications.
 ```
-
-
 
 <!-- Second attempt, after researching unclear answers and waiting a few days. In my own words, no lookup allowed.  -->
 
