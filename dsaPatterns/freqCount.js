@@ -16,7 +16,8 @@ function freqCount(data) {
 // console.log(freqCount(str));
 // console.log(freqCount(empty));
 
-/* Write a function: same
+/*
+Write a function: same
 - Goal: check if the second array contains every value of the first array squared, and the
 frequency must be the same
 - Input: two arrays
@@ -39,6 +40,8 @@ same([2,2], [4,4,1]) // false
 
 // return true
 
+
+
 function same(arr1, arr2) {
   let freq1 = freqCount(arr1);
   let freq2 = freqCount(arr2);
@@ -51,8 +54,11 @@ function same(arr1, arr2) {
   }
   return true;
 }
-
+// O(n) because it at worst must look at each value of each input
 console.log(same([1, 2, 3], [1, 4, 9]));
 console.log(same([2, 2], [4, 4]));
 console.log(same([2, 2], [4, 4, 4]));
 console.log(same([2, 2, 2], [4, 4]));
+
+
+//
