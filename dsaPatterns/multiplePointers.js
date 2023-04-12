@@ -1,6 +1,11 @@
 "use strict";
 
 /*
+---  Multiple pointers  ---
+Great for:
+-  */
+
+/*
 Goal: create a function that finds the first pair in an array where the sum is 0
 Input: array
 Output: array or undefined
@@ -61,6 +66,36 @@ function sumZero2(arr) {
   }
 }
 
-console.log(sumZero2([-7,-2,-1, 1, 2]))
-console.log(sumZero2([-5,-3,-1, 2, 3, 4]))
-console.log(sumZero2([-2,-1, 4,5,6,7]))
+// console.log(sumZero2([-7,-2,-1, 1, 2]))
+// console.log(sumZero2([-5,-3,-1, 2, 3, 4]))
+// console.log(sumZero2([-2,-1, 4,5,6,7]))
+
+/*
+Goal: take a sorted array and count the unique values
+Input: sorted array
+Output: int
+
+// declare a function called countUniqueVals that takes an array
+
+  // create a freq count
+  // return the freq count keys length
+
+countUniqueVals([1,2,2,3,3,4]) // 4
+countUniqueVals([]) // 0
+countUniqueVals[1,2,3,4,5] // 5
+
+*/
+
+// O(n) w/ freqMap, not intended to be completed this way but it works
+function countUniqueVals(arr) {
+
+    const freqMap = {}
+    for (let num of arr) {
+      freqMap[num] ? freqMap[num] += 1 : freqMap[num] = 0
+    }
+  return Object.keys(freqMap).length || 0;
+}
+
+console.log(countUniqueVals([1,2,2,3,4]))
+console.log(countUniqueVals([]))
+

@@ -1,5 +1,10 @@
 "use strict";
 
+/* The frequency counter pattern is especially useful for solving problems that involve comparing two arrays or strings and checking if they have the same frequency of values or patterns. It can also be useful for solving problems that involve finding patterns or subsets within an array or string. */
+
+/*  keywords that might suggest the use of the frequency counter pattern include "frequency", "count", "occurrence", "matching", "anagram", "subset", "pattern", and "comparison" */
+
+
 let arr = [1, 1, 1, 2, 2, 3, 4, 5];
 let str = "hello";
 let empty = "";
@@ -40,8 +45,6 @@ same([2,2], [4,4,1]) // false
 
 // return true
 
-
-
 function same(arr1, arr2) {
   let freq1 = freqCount(arr1);
   let freq2 = freqCount(arr2);
@@ -59,6 +62,5 @@ console.log(same([1, 2, 3], [1, 4, 9]));
 console.log(same([2, 2], [4, 4]));
 console.log(same([2, 2], [4, 4, 4]));
 console.log(same([2, 2, 2], [4, 4]));
-
 
 //
