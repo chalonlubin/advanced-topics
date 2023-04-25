@@ -57,7 +57,7 @@ function maxProfit(prices) {
 
 
 
-/* Refactor w/ sliding window */
+/* Refactor w/ sliding window (cleaner)*/
 
 function maxProfit2(prices)  {
   let [left, right, max] = [0,1,0];
