@@ -37,3 +37,25 @@ var twoSum2 = function(nums, target) {
       }
   }
 }
+
+
+/* Attempt 3  Time O(n) Space O(n)*/
+
+const twoSum3 = function(nums, target) {
+
+  let slow = 0;
+  let fast = 1;
+
+  while (slow < nums.length) {
+      if (nums[slow] + nums[fast] === target) {
+          return [slow, fast]
+      }
+
+      if (fast < nums.length) {
+          fast++
+      } else {
+          slow++
+          fast = slow + 1;
+      }
+  }
+}
