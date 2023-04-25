@@ -3,7 +3,7 @@
 /* Given the head of a singly linked list, reverse the list, and return the reversed list. */
 
 function reverseList(head) {
-  let prev = null;  // set prev to null
+  let prev = null; // set prev to null
   let cur = head; // set cur to head
 
   while (cur) {
@@ -12,13 +12,13 @@ function reverseList(head) {
     prev = cur; // set prev to current
     cur = next; // update cur position
   }
-  head = prev
+  head = prev;
   return head; // once cur is null return the prev which will be new head
 }
 
 /* Time O(n) space O(1) */
 function reverseList(head) {
-  let [cur, prev, next] = [head, null, null]
+  let [cur, prev, next] = [head, null, null];
 
   while (cur) {
     next = cur.next; // 2  // null
@@ -27,17 +27,12 @@ function reverseList(head) {
     cur = next; // 2 // null
   }
 
-
   return prev;
 }
 
 // cur is head, next , prev
 
 // while cur
-    // save cur.next to next
-    // set cur.next to prev
-    // set cur to prev
-
-
-
-
+// save cur.next to next
+// set cur.next to prev
+// set cur to prev
