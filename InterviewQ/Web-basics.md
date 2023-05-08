@@ -97,3 +97,7 @@ CORS allows a server to specify which domains are allowed to access its resource
 ### What is DNS?
 
 _DNS stands for Domain Name System. It is a system used to translate human-readable domain names, such as "google.com" or "facebook.com", into IP addresses that are used by computers to communicate over the internet._
+
+### What is a port?
+
+_In summary, a port is a unique identifier used by programs to specify the specific process or service they want to communicate with on a device within a network._
