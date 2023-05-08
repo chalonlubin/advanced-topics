@@ -22,7 +22,7 @@ class Tree {
     let currentNode = this.root;
     while (true) {
       if (currentNode.value === value) return this;
-      if (currentNode.value > value) {
+      if (value > currentNode.value) {
         if (currentNode.right) {
           currentNode = currentNode.right;
           continue;
@@ -71,6 +71,42 @@ class Tree {
     return contents
   }
 
+  dfsPre() {
+    let contents = [];
+    function traverse(node) {
+      contents.push(node.value)
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+    }
+
+    traverse(this.root);
+    return contents;
+  }
+
+  dfsPost() {
+    let contents = [];
+    function traverse(node) {
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+      contents.push(node.value)
+    }
+
+    traverse(this.root);
+    return contents;
+  }
+
+
+  dfsInOrder() {
+    let contents = [];
+
+    function traverse(current) {
+      current.left && traverse(current.left);
+      contents.push(current.value)
+      current.right && traverse(current.right);
+    }
+    traverse(this.root)
+    return contents;
+  }
 }
 
 let tree = new Tree();
@@ -81,3 +117,6 @@ tree.insert(3);
 console.log(tree.find(5))
 console.log(tree.find(20))
 console.log(tree.bfs())
+console.log(tree.dfsPre())
+console.log(tree.dfsPost())
+console.log(tree.dfsInOrder())
