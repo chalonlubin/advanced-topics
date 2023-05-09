@@ -110,91 +110,32 @@ class Tree {
 }
 
 
-
-/* Given the root of a binary tree, return its maximum depth.
-
-A binary tree's maximum depth is the number of nodes along the longest path
-from the root node down to the farthest leaf node. */
-
-const maxDepth = function(root) {
-  // traverse down the tree counting levels on the way down
-  // return the lowest once we've reached the bottom
-  // compare once we reach the leaf nodes
-  let max = 0;
-
-  function traverse(node, depth) {
-    if (!node) return;
-    // if we have reached the bottom, compare total depth
-    if (!node.left && !node.right) {
-      max = Math.max(max, depth)
-    }
-    traverse(node.left, depth+1);
-    traverse(node.right, depth+1);
-
-  }
-  if (!root) return 0;
-  traverse(root, 1);
-  return max;
-
-}
-
-const maxDepth2 = function(root) {
-  if (!root) return 0;
-  return 1 + Math.max(maxDepth2(root.left), maxDepth2(root.right))
-}
-
-const iterativeDepth = function(root) {
-  if (!root) {
-    return 0;
-  }
-
-  let level = 0;
-  let queue = [root]
-
-  while (queue.length) {
-    let size = queue.length;
-    for (let i = 0; i < size; i++) {
-      let node = queue.shift()
-      if (node.left) queue.push(node.left);
-      if (node.right) queue.push(node.right);
-    }
-    level += 1;
-  }
-  return level;
-}
-
-
-
-const iterativeDepth2 = function(root) {
-  if (!root) {
-    return 0;
-  }
-
-  let depth = 0;
-  let stack = [{ node: root, level: 1 }];
-
-  while (stack.length > 0) {
-    let { node, level } = stack.pop();
-
-    depth = Math.max(depth, level);
-
-    if (node.right) {
-      stack.push({ node: node.right, level: level + 1 });
-    }
-    if (node.left) {
-      stack.push({ node: node.left, level: level + 1 });
-    }
-  }
-
-  return depth;
-};
-
-
 let tree = new Tree();
 tree.insert(10);
 tree.insert(11);
 tree.insert(5);
 tree.insert(3);
-console.log(maxDepth(tree.root))
-console.log(maxDepth2(tree.root))
-console.log(iterativeDepth(tree.root));
+
+let treeTwo = new Tree();
+treeTwo.insert(10);
+treeTwo.insert(11);
+treeTwo.insert(5);
+treeTwo.insert(3);
+
+/* Given the roots of two binary trees p and q, write a function to check if
+they are the same or not.
+
+Two binary trees are considered the same if they are structurally identical,
+and the nodes have the same value. */
+
+/* Recursive version, makes much more sense */
+
+function isSameTreeRecursive(a,b) {
+  if (!a && !b) return true;
+  if ((!a || !b) || (a.value !== b.value)) return false;
+
+  return (isSameTreeRecursive(a.left, b.left) &&
+  isSameTreeRecursive(a.right, b.right))
+}
+
+
