@@ -119,6 +119,7 @@ from the root node down to the farthest leaf node. */
 const maxDepth = function(root) {
   // traverse down the tree counting levels on the way down
   // return the lowest once we've reached the bottom
+  // compare once we reach the leaf nodes
   let max = 0;
 
   function traverse(node, depth) {
@@ -131,10 +132,35 @@ const maxDepth = function(root) {
     traverse(node.right, depth+1);
 
   }
-
+  if (!root) return 0;
   traverse(root, 1);
   return max;
 
+}
+
+const maxDepth2 = function(root) {
+  if (!root) return 0;
+  return 1 + Math.max(maxDepth2(root.left), maxDepth2(root.right))
+}
+
+const iterativeDepth = function(root) {
+  if (!root) {
+    return 0;
+  }
+
+  let level = 0;
+  let queue = [root]
+
+  while (queue.length) {
+    let size = queue.length;
+    for (let i = 0; i < size; i++) {
+      let node = queue.shift()
+      if (node.left) queue.push(node.left);
+      if (node.right) queue.push(node.right);
+    }
+    level += 1;
+  }
+  return level;
 }
 
 let tree = new Tree();
@@ -142,4 +168,6 @@ tree.insert(10);
 tree.insert(11);
 tree.insert(5);
 tree.insert(3);
-console.log(maxDepth(tree.root));
+console.log(maxDepth(tree.root))
+console.log(maxDepth2(tree.root))
+console.log(iterativeDepth(tree.root));
