@@ -22,3 +22,23 @@ var invertTree = function (root) {
   // return next root if not null.
   return root;
 };
+
+
+/* Given the root, invert a binary tree */
+
+const invertTree = function(root) {
+  if (!root) return null;
+
+  let queue = [root];
+
+  while (queue.length) {
+    let current = queue.pop()
+    let temp = current.left ?? null;
+    current.left = current.right ?? null;
+    current.right = temp;
+    if (current.right !== null) queue.push(current.right);
+    if (current.left !== null) queue.push(current.left);
+  }
+
+  return root;
+}
