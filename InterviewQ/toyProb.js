@@ -42,3 +42,5 @@ const namesToRemove = ["Bob", "Eve"];
 
 console.log(removeItems(data, namesToRemove));
 
+
+
