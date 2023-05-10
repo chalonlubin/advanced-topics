@@ -3,7 +3,7 @@ You can assume that each array will contain at least an int, and/or another arra
 
 const testCase1 = [1] // 1
 const testCase2 = [1,2,3,[4,5]] // 2
-const testCase3 = [1,2,3,[4,5],[6,[3,4,5,[7,9,10,[2]]]]] // 2
+const testCase3 = [1,2,3,[4,5],[6,[3,4,5,[7,9,10,[2]]]]] // 5
 
 
 
