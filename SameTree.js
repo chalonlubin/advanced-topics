@@ -128,7 +128,8 @@ they are the same or not.
 Two binary trees are considered the same if they are structurally identical,
 and the nodes have the same value. */
 
-/* Recursive version, makes much more sense */
+/* Recursive version, makes much more sense
+BUGNOTE: Value is my version, val is leetcodes version -_- */
 
 function isSameTreeRecursive(a,b) {
   if (!a && !b) return true;
@@ -137,5 +138,7 @@ function isSameTreeRecursive(a,b) {
   return (isSameTreeRecursive(a.left, b.left) &&
   isSameTreeRecursive(a.right, b.right))
 }
+
+
 
 
