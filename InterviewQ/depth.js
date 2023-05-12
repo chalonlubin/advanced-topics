@@ -39,13 +39,13 @@ function dfs(input) {
   let contents = [];
 
   function flatten(item) {
-    if (typeof item === "object") {
-      for (const value in item) {
-        flatten(item[value]);
+    if (Array.isArray(item)) {
+      for (const data of item) {
+        flatten(data);
       }
-    } else if (Array.isArray(item)) {
-      for (const i of item) {
-        flatten(i);
+    } else if (typeof item === "object") {
+      for (const key in item) {
+        flatten(item[key]);
       }
     } else {
       contents.push(item);
@@ -55,8 +55,38 @@ function dfs(input) {
   return contents;
 }
 
+dfs(sample)
+
+function flatten2(input) {
+  let contents = [];
+  let stack = [input];
+
+  while (stack.length) {
+    let current = stack.pop()
+
+    if (Array.isArray(current)){
+      for (let i = 0; i < current.length; i++) {
+        stack.push(current[i])
+      }
+    } else if (typeof current === 'object' && current !== null) {
+      for (const value in current) {
+        stack.push(current[value]);
+      }
+    } else {
+      contents.push(current);
+    }
+  }
+  return contents
+}
 
 
-console.log(dfs(sample));
+console.log(flatten2(sample));
+
+
+/* stack [] last in is first off (push, pop)
+   queue [] first in is first out (push, shift) */
+
+
+// console.log(dfs(sample));
 
 
