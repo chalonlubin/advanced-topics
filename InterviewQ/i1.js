@@ -31,13 +31,8 @@ const familyBook = [
 // continue this process for each child.
 
 function createTree(people) {
-  // create a more sensible familyBook
-  let familyMap = new Map();
-  people.forEach((person) => {
-    familyMap.set(person.name, person);
-  });
 
-  // populate tree function
+
   function buildTree(member) {
     const children = people.filter((person) =>
       person.parents.includes(member.name)
@@ -48,13 +43,13 @@ function createTree(people) {
     };
   }
 
-  // find root
   const root = people.find(
     (person) => person.parents.length === 0
   );
 
   return buildTree(root);
 }
+
 
 const tree = createTree(familyBook);
 
