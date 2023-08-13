@@ -72,6 +72,8 @@ function createFamilyTree(familyBook) {
     familyMap.set(member.name, member);
   });
 
+  console.log(familyMap);
+
   // Recursive function to build the tree.
   function buildTree(member) {
     const children = familyBook.filter(person => person.parents.includes(member.name));
