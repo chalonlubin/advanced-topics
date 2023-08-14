@@ -31,8 +31,6 @@ const familyBook = [
 // continue this process for each child.
 
 function createTree(people) {
-
-
   function buildTree(member) {
     const children = people.filter((person) =>
       person.parents.includes(member.name)
@@ -46,10 +44,8 @@ function createTree(people) {
   const root = people.find(
     (person) => person.parents.length === 0
   );
-
   return buildTree(root);
 }
-
 
 const tree = createTree(familyBook);
 

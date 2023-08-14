@@ -22,9 +22,10 @@ function productExceptSelf(nums) {
 
 productExceptSelf(nums);
 
+const nums1 = [1, 2, 3, 4];
 /* Working solution */
 function productExceptSelf2(nums) {
-  const result = []; //1 , 1 , 2, 6
+  const result = []; //1 , 1 , 2, 6 //
 
   let product = 1;
   for (let i = 0; i < nums.length; i++) {
@@ -35,7 +36,7 @@ function productExceptSelf2(nums) {
 
   let suffix = 1; // 1, 4, 12,
   for (let i = nums.length - 1; i >= 0; i--) {
-    result[i] *= suffix; // [1,1,2,6*1] /  [1,1,8,6] /
+    result[i] *= suffix; // [1,1,2,6*1] /  [1,1,2*4=8,6] /
     suffix *= nums[i]; // 1*4=4 / 4*3=12 /
   }
 
