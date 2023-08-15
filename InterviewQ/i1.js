@@ -31,19 +31,28 @@ const familyBook = [
 // continue this process for each child.
 
 function createTree(people) {
+
+  // build recursive function
   function buildTree(member) {
+
+    // find children of the member
     const children = people.filter((person) =>
       person.parents.includes(member.name)
     );
+    // return an object with the name and their children in an array.
     return {
       name: member.name,
       children: children.map((child) => buildTree(child)),
     };
   }
 
+
+  // find the root
   const root = people.find(
     (person) => person.parents.length === 0
   );
+
+  // output the tree
   return buildTree(root);
 }
 
