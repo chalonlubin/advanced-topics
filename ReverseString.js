@@ -1,6 +1,4 @@
-'use strict';
-
-const exampleString = 'Backward';
+let exampleString = 'Hannah';
 
 const reverseString = function (s) {
   let result = '';
@@ -11,8 +9,21 @@ const reverseString = function (s) {
 };
 
 const reverseString2 = (s) => {
-  return s.split('').reverse().join(''); d
+  return s.split('').reverse().join('');
 };
 
-console.log(reverseString(exampleString));
-console.log(reverseString2(exampleString));
+/* in place solution... wont work in strict mode */
+
+var revString = function (s) {
+  let left = 0;
+  let right = s.length - 1;
+
+  while (left <= right) {
+    [s[left], s[right]] = [s[right], s[left]];
+    left++;
+    right--;
+  }
+  return s;
+};
+
+console.log(revString(exampleString));
