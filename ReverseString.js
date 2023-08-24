@@ -27,3 +27,8 @@ var revString = function (s) {
 };
 
 console.log(revString(exampleString));
+
+
+const revString2 = function (s) {
+
+}
